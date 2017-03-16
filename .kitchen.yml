@@ -1,0 +1,8 @@
+suites:
+- name: bb_base
+  driver_config:
+    image_name: <%= ENV['LXD_IMAGE_NAME'] || 'ubuntu-14.04-static-ip' %>
+    ipv4: 10.100.0.10/24
+  run_list:
+  - recipe[bb_base]
+  attributes:
